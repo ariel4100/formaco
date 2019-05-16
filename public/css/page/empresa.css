@@ -1,0 +1,90 @@
+.somos{
+
+	color: #40B6E5;
+
+	font-size: 45px;
+
+	font-family: 'Raleway', sans-serif;
+
+	margin-bottom: 0px;
+
+}
+
+.contenido p{
+
+	font-family:'Source Sans Pro', sans-serif;
+
+	font-size: 18px;
+
+	color: #666666;
+
+}
+
+.titulo{
+	color: #045A9C;
+	font-size: 48px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.titulo p{
+
+	margin: 10px 0;
+
+}
+
+.subtitulo{
+
+	color: #717171;
+
+	font-family:'Source Sans Pro', sans-serif;
+
+	font-size:20px;
+
+}
+
+.vision, .mision{
+
+	background-color: #97B300;
+
+	padding: 25px;
+
+	font-family: 'Raleway', sans-serif;
+
+	color: #F9F1E9;
+
+}
+
+.tit{
+
+	margin: 0px;
+
+	font-family: 'Raleway', sans-serif;
+
+	font-size: 16px;
+
+	color: #F9F1E9;
+
+}
+
+.barra-tit{
+
+	width: 34px;
+
+	height: 1px;
+
+	background-color: #F9F1E9;
+
+}
+
+.barra{
+
+    width: 100px;
+
+    height: 2px;
+
+    background-color: #41B6E6;
+
+    margin-bottom: 50px;
+
+}
+

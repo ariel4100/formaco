@@ -1,0 +1,38 @@
+body{
+	background-color: #a9a7a74f;
+}
+
+.container{
+	width: 90%;
+	max-width: 500px;
+	background-color: #045A9C;
+	padding: 20px 40px;
+	border-radius: 3px;
+}
+
+main{
+	padding-left: 0;
+}
+
+.input-field .prefix.active{
+	color: #787950;
+}
+
+.input-field .prefix{
+	color:  white;
+}
+.btn-login{
+	background-color: white;
+	color: #045A9C;
+}
+
+.logo-login{
+	width: 80%;
+	margin: auto;
+	padding: 30px;
+}
+
+.logo-login img{
+	display: block;
+	margin: auto;
+}

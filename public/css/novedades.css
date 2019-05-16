@@ -1,0 +1,718 @@
+.btn-nove{
+
+
+
+    color: black;
+
+
+
+    border-radius: 0px;
+
+
+
+    font-size: 15px;
+
+
+
+    transition: 0.4s;
+
+
+
+    /*background-color: #006F9E;*/
+
+
+
+    float:left;
+
+
+
+    margin-top: 2%;
+
+
+
+}
+
+
+
+.btn-nove:hover{
+
+
+
+    color: #777;
+
+
+
+}
+
+
+
+.titular_listado_novedades {
+
+
+
+    position: relative;
+
+
+
+
+
+
+
+    margin-top: 6px;
+
+
+
+}
+
+
+
+
+
+
+
+.titular_listado_novedades:first-child {
+
+
+
+margin-top: 25px;
+
+
+
+}
+
+
+
+.linea_novedad {
+
+
+
+    height: 1px;
+
+
+
+    background: #B0B0B0;
+
+
+
+    width: 96%;
+
+
+
+    display: block;
+
+
+
+    z-index: -1;
+
+
+
+}
+
+
+
+.Nombre_novedad {
+
+
+
+    font-size: 14px;
+
+
+
+    color: #434242;
+
+
+
+    padding-left: 11px;
+
+
+
+    background-color: white;
+
+
+
+    text-align: right;
+
+
+
+    line-height: 35px;
+
+
+
+    font-weight: 400;
+
+
+
+
+
+
+
+}
+
+
+
+.Nombre_novedad2 {
+
+
+
+    font-size: 14px;
+
+
+
+    color: #FFFFFF;
+
+
+
+    background-color: #1E2576;
+
+
+
+    width: 130px;
+
+
+
+    padding-left: 38px;
+
+
+
+    padding-right: 30px;
+
+
+
+    font-weight: 400;
+
+
+
+    position: absolute;
+
+
+
+    top: 12%;
+
+
+
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+form.buscador_noticias input {
+
+
+
+
+
+
+
+color:#666666;
+
+
+
+width: 100%;
+
+
+
+background-color: transparent !important;
+
+
+
+margin-bottom: 20px;
+
+
+
+padding-left: 15px !important;
+
+
+
+border: 1px solid #EEEEEE;
+
+
+
+background: url("../imagenes/iconos/lupabusca.png") right 10px center no-repeat;
+
+
+
+}
+
+
+
+
+
+
+
+form.buscador_noticias input:focus {
+
+
+
+
+
+
+
+color:#444;
+
+
+
+width: 100%;
+
+
+
+background-color: transparent !important;
+
+
+
+margin-bottom: 20px;
+
+
+
+padding-left: 15px !important;
+
+
+
+border: 1px solid #EEEEEE;
+
+
+
+background: url("../imagenes/iconos/lupabusca.png") right 10px center no-repeat;
+
+
+
+border-radius: 100px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.buscador2{
+
+
+
+     width: 367px;
+
+
+
+}
+
+
+
+.imgnoticias{
+
+
+
+    margin-bottom: 60px;
+
+
+
+}
+
+
+
+.novedadestitulo{
+
+
+
+    color:#005F79;
+
+
+
+    font-size: 22px;
+
+
+
+    font-weight: 400;
+
+
+
+    margin-bottom: 0px;
+
+
+
+}
+
+
+
+.novedadesbreve{
+
+
+
+   /* margin-top: 5%;*/
+
+
+
+}
+
+
+
+
+
+
+
+.novedadesbreve p{
+
+
+
+
+
+
+
+    color: #666666;
+
+
+
+    font-weight: 400;
+
+
+
+    font-size: 15px;
+
+
+
+}
+
+
+
+
+
+
+
+.novedadesfecha{
+
+
+
+    color: #858585;
+
+
+
+    font-weight: 400;
+
+
+
+    font-size: 14px;
+
+
+
+    margin-top: 0px;
+
+
+
+}
+
+
+
+
+
+
+
+.novedadesamplia p{
+
+
+
+
+
+
+
+    color: #444444;
+
+
+
+    font-weight: 300;
+
+
+
+    font-size: 17px;
+
+
+
+}
+
+
+
+.tagcategoria{
+
+
+
+    list-style: none;
+
+
+
+    color: #716E6E;
+
+
+
+    font-size: 16px;
+
+
+
+    padding-top: 10px;
+
+
+
+    font-weight: 400;
+
+
+
+}
+
+
+
+
+
+
+
+.categorias{
+
+
+
+    width: 100%;
+
+
+
+    background-color:white;
+
+
+
+    border-bottom: 1px solid #545456;
+
+
+
+}
+
+
+
+.categorias p{
+
+
+
+    color: #005F79;
+
+
+
+    font-size: 20px;
+
+
+
+    padding-top:5px;
+
+
+
+    font-weight: 400;
+
+
+
+    margin-bottom: 5px;
+
+
+
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.areacomercial{
+
+
+
+    color: #999999;
+
+
+
+    font-size: 18px;
+
+
+
+    font-weight: 400;
+
+
+
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+.migas{font-size: 16px;color: #a0a0a0;margin-bottom: 7%;}
+
+
+
+.migas>a{
+
+
+
+    color: #a0a0a0;
+
+
+
+    font-size: 16px
+
+
+
+}
+
+
+
+.migas>.actu{
+
+
+
+    color: #000;
+
+
+
+}
+
+
+
+.migas>span.glyphicon{
+
+
+
+    font-size: 8px;
+
+
+
+     color: #777777;
+
+
+
+    top: -2px;
+
+
+
+    font-weight: 300;
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+.titulonove{
+
+
+
+    color: #005F79;
+
+
+
+    font-size: 45px;
+
+
+
+    font-weight: 400;
+
+
+
+    text-align: center;
+
+
+
+    margin-bottom: 4%;
+
+
+
+}
+
+
+
+.novep{
+
+
+
+    color: #747474;
+
+
+
+    font-size: 20px;
+
+
+
+    margin: 0px;
+
+
+
+    text-transform: uppercase;
+
+
+
+}
+
+
+
+.lineatit{
+
+
+
+        border-bottom: 3px solid #FFD90C;
+
+
+
+    width: 6%;
+
+
+
+    margin-bottom: 5%;
+
+
+
+}
+
+
+
+.btn-descarga{
+
+
+
+    background-color: white;
+
+
+
+    color: #005F79;
+
+
+
+    border: 1px solid #005F79;
+
+
+
+    border-radius: 0px;
+
+
+
+    margin-bottom:  30px;
+
+
+
+    padding: 10px 29px;
+
+
+
+}
+

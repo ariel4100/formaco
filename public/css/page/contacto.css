@@ -1,0 +1,153 @@
+.datos{
+
+	position: absolute;
+
+    bottom: 0px;
+
+    background-color: #333333;
+
+    box-shadow: 5px 10px 10px #ebebeb;
+
+    left: 5%;
+
+    color: white;
+
+    padding: 5px;
+
+}
+
+.contacto{
+
+	background-color: rgba(240,240,240,0.20);
+
+	padding: 10px;
+
+	color: #666666;
+
+	font-weight: 300;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 17px;
+
+}
+
+.titulo-contacto{
+
+	color: #97B700;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 45px;
+
+	margin-bottom: 0px;
+
+}
+
+.barra{
+
+	background-color: #97B700;
+
+	height: 5px;
+
+	width: 70px;
+
+}
+
+.boton{
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
+
+.btn, .btn-large {
+  	margin-top: 10px;
+    color: white;
+    text-align: center;
+
+}
+
+.btn:hover, .btn-large:hover{
+
+	background-color:rgb(205, 205, 205);
+
+}
+
+.input-field .prefix.active{
+
+	color: #DDC6B4;
+
+}
+
+.titulo-datos{
+
+	margin-left: 70px;
+
+    font-size: 16px;
+
+    color: white;
+
+		font-family: 'Source Sans Pro', sans-serif;
+
+		font-weight: 700;
+
+}
+
+/* label focus color */
+
+ .input-field input:focus + label, textarea:focus + label {
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+   color: #EE6C00 !important;
+
+ }
+
+ /* label underline focus color */
+
+ .row .input-field input:focus, .row textarea:focus{
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+   border-bottom: 1px solid #005F79 !important;
+
+   box-shadow: 0 1px 0 0 #005F79 !important
+
+ }
+
+
+
+.input-field input + label, textarea + label{
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+  color: #005F79;
+
+}
+
+.row .input-field input, .row textarea{
+
+  border-bottom: 1px solid #005F79 !important;
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+   box-shadow: 0 1px 0 0 #005F79 !important
+
+}
+
+.form{
+
+	color: #717171;
+
+	font-size: 20px;
+
+}
+
+.contact{
+	color: #04599B;
+	font-size: 32px;
+}

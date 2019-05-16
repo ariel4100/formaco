@@ -1,0 +1,88 @@
+
+.center2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo-preguntas{
+  color: #41B6E6;
+  font-size: 36px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 0px;
+}
+.barra{
+    width: 100px;
+    height: 2px;
+    background-color: #41B6E6;
+    margin-bottom: 50px;
+}
+.collapsible-header{
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  color: #34ABD4;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+.contacto{
+  background-color: #F4F4F4;
+  border-bottom: 1px solid #DDDDDD;
+  position: relative;
+}
+
+.content-contacto p{
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+.subtitulo-contacto{
+  background-color: #F9F9F9;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+  color:#333333;
+}
+
+.contacto{
+  background-color: #F8F8F8;
+}
+.btn, .btn-large {
+  margin-top: 10px;
+  width: 100%;
+    color: #41B6E6;
+    background-color: transparent;
+    border: 1px solid #41B6E6;
+}
+.titulo-con-pre{
+  font-size: 27px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+.btn:hover, .btn-large:hover{
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  color: #41B6E6;
+}
+/* label focus color */
+ .input-field input:focus + label, textarea:focus + label {
+  font-family: 'Raleway', sans-serif;
+   color: #41B6E6 !important;
+ }
+ /* label underline focus color */
+ .row .input-field input:focus, .row textarea:focus{
+  font-family: 'Raleway', sans-serif;
+   border-bottom: 1px solid #41B6E6 !important;
+   box-shadow: 0 1px 0 0 #41B6E6 !important
+ }
+
+.input-field input + label, textarea + label{
+  font-family: 'Raleway', sans-serif;
+  color: #41B6E6 !important;
+}
+.row .input-field input, .row textarea{
+  border-bottom: 1px solid #41B6E6 !important;
+  font-family: 'Raleway', sans-serif;
+   box-shadow: 0 1px 0 0 #41B6E6 !important
+}

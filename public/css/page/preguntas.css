@@ -1,0 +1,33 @@
+
+.fila{
+
+  height: 70px;
+  display: flex;
+  align-items: center;
+  color: #045A9C;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.cont-img-pro{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.cont-img-pro:hover{
+  background-color: rgba(96, 96, 96, 0.5);
+  background-image: url("../../img/generico/mas.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.titulo-servicio{
+  color:#009688;
+  font-size: 22px;
+}
+.destacado{
+  
+}

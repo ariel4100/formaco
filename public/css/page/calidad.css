@@ -1,0 +1,85 @@
+.barra{
+
+	border-top: 2px solid #1F950C;
+
+	display: inline-block;
+
+	margin: 1% 0px;
+
+	color: #1F950C;
+
+	font-size: 35px;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.div-descarga{
+
+	background-color: #F8F8F8;
+
+	border: 1px solid #DDDDDD;
+
+	border-bottom: 4px solid #1F950C;
+
+	padding: 25px 25px;
+
+	display: flex;
+
+	align-items: center;
+
+	display: flex;
+
+	justify-content: space-between;
+
+}
+
+.download, .nombre{
+
+	display: inline-block;
+
+}
+
+.nombre{
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 15px;
+
+	color:#464646;
+
+}
+
+.subtitulo p{
+
+	color: #1F950C;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 20px;
+
+	font-weight: 700;
+
+}
+
+.subtitulo{
+
+	padding: 0px 5px;
+
+	border-top: 2px solid #1F950C;
+
+	display: inline-block;
+
+}
+
+.contenido p{
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	color: #444444;
+
+	font-size: 17px;
+
+	font-weight: 300;
+
+}

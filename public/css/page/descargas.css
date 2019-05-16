@@ -1,0 +1,57 @@
+.barra{
+
+	border-top: 2px solid #005F79;
+
+	display: inline-block;
+
+	margin: 1% 0px;
+
+	color: #005F79;
+
+	font-size: 35px;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.div-descarga{
+
+	background-color: #F8F8F8;
+
+	border: 1px solid #DDDDDD;
+
+	border-bottom: 4px solid #005F79;
+
+	padding: 10px 25px;
+
+	display: flex;
+
+	align-items: center;
+
+}
+
+.pdf, .download, .nombre{
+
+	display: inline-block;
+
+}
+
+.pdf{
+
+	margin-right: 5%;
+
+}
+
+.nombre{
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 15px;
+
+	color:#464646;
+
+	width: 65%;
+
+	margin-right: 5%;
+
+}

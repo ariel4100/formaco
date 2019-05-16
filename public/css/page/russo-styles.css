@@ -1,0 +1,525 @@
+
+
+/* MEDIA QUERIES / MEDIA QUERIES / MEDIA QUERIES / MEDIA QUERIES */
+.main{
+	margin-top: 65px;
+}
+.full-size {
+	width: 100% !important;
+}
+.pointer {
+	cursor: pointer;
+}
+.center {
+	margin: 0 auto;
+	display: block;
+}
+.table {
+	display: table;
+	width: 100%;
+	margin: 0 auto;
+}
+.table > * {
+	display: table-cell;
+	vertical-align: middle
+}
+.anima1 {
+	-webkit-transition: all .1s linear;
+	-o-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-ms-transition: all .1s linear;
+	transition: all .1s linear;
+}
+.anima2 {
+	-webkit-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	transition: all .2s linear;
+}
+/* Extra Small - XS */
+@media(max-width:767px) {
+header .menu .navbar-brand {
+	max-width: 250px;
+    padding: 0px 0 0px 15px;
+}
+header .menu .navbar-brand img{
+	max-width: 120px;
+}
+.navbar-default .navbar-toggle {
+	/*margin-top: 35px;*/
+	/*background: #0099FF;*/
+	/*margin-top: 65px;*/
+}
+.navbar-default .navbar-toggle:hover {
+}
+header .menu .navbar .navbar-collapse {
+	padding: 0;
+}
+header .menu .navbar .navbar-collapse ul {
+	width: 100%;
+}
+header .menu .navbar-collapse .navbar-nav.navbar-right{
+	padding: 0;
+}
+header .menu .navbar-nav li {
+	display: block;
+	width: 100%;
+}
+header .menu .navbar-nav li > a {
+	padding: 15px 0 10px 10px;
+	line-height: 20px;
+	margin: 0;
+}
+.alpha-menu.am-response-switch:before{
+	display: none;
+}
+section.home,
+section.servicios,
+section.empresa,
+section.productos,
+section.distribuidores,
+section.novedades,
+section.contacto,
+section.cliente,
+section.galeria,
+section.premios,
+section.agenda {
+	padding: 20px 0;
+}
+section.home .sub-categorias-home .item-cate,  
+section.home .flexy .col1,  section.home .flexy .col2,
+section.empresa .main-desc,
+section.empresa .slider-detalle {
+	/*padding: 0;*/
+}
+section.home .publicada .desc {
+	border-left: 0;
+}
+footer .sitemap,
+footer .n-datos{
+	padding: 0 15px;
+	margin-bottom: 15px;
+}
+footer .redes{
+	padding-top: 0;
+}
+footer .redes h4{
+	text-align: left;
+	margin-top: 0;
+}
+footer .redes ul{
+	position: relative;
+	left: 0;
+	-webkit-transform: initial;
+	-ms-transform: initial;
+	transform: initial;
+}
+
+section.home h2{
+	margin: 0 0 15px;
+	line-height: 36px;
+    font-size: 32px;
+}
+section.empresa h2,
+section.servicios h2,
+section.premios h2,
+section.contacto hgroup h3,
+section.agenda .txt-evento h3{
+	font-size: 44px;
+    line-height: 48px;
+}
+section.agenda .txt-evento h3{
+	margin: 5px 0;
+}
+section.agenda .txt-evento .datos-evento{
+	margin: 30px 0 0;
+}
+section.agenda .txt-evento p{
+	padding: 0;
+}
+section.servicios h2{
+	margin: 0 0 10px;
+}
+section.empresa h3,
+section.contacto hgroup h4{
+	font-size: 24px;
+	line-height: 24px;
+	margin: 0 0 10px;
+}
+section.contacto .form-contacto form{
+	margin: 2em 0;
+}
+section.contacto .form-contacto form .form-group,
+section.contacto .form-contacto form .terminos{
+	padding-left: 0;
+	padding-right: 0;
+}
+section.empresa p,
+section.servicios p{
+	width: 100%;
+	margin: 0;
+	text-align: left;
+	font-size: 14px;
+    line-height: 18px;
+}
+section.servicios .beneficios ul{
+	padding: 30px 0px;
+}
+section.servicios .beneficios ul li{
+	font-size: 21px;
+    line-height: 24px;
+}
+header .menu .navbar .navbar-collapse ul .submenu{
+	display: none !important;
+}
+section.novedades .listado-novedades,
+section.novedades .buscador-categorias{
+	padding-left: 0;
+	padding-right: 0;
+}
+section.novedades .item-novedad h3{
+	padding: 10px 0 0 0;
+	margin: 0;
+}
+section.novedades .item-novedad{
+	margin: 0;
+}
+section.novedades .item-novedad-detalle .img{
+	margin: 0 0 20px;
+}
+section.novedades .item-novedad-detalle .comparte{
+	margin-top: 0px;
+}
+section.novedades .item-novedad-detalle{
+	margin: 0;
+}
+
+
+
+
+
+}
+
+/* Small - SM */
+@media(min-width:768px) and (max-width:991px) {
+header .menu .navbar-brand {
+	padding: 15px 0;
+}
+header .menu .navbar-brand img{
+	max-width: 140px;
+}
+header .menu .navbar-nav li > a{
+	margin: 0 7px;
+}
+footer .redes {
+	padding: 10px 15px;
+}
+header .menu .navbar-nav li > a {
+	font-size: 18px;
+    padding: 10px 0;
+}
+header .menu .navbar .navbar-collapse ul .submenu li a{
+	font-size: 14px;
+	line-height: 16px;
+}
+header .menu .navbar-collapse .navbar-nav.navbar-right{
+	padding: 55px 0 0;
+}
+
+section.home .item-destacado h3{
+    font-size: 24px;
+    padding: 20px 10px 10px;
+    line-height: 30px;
+    min-height: 90px;
+}
+section.home .item-destacado h3 img{
+	margin-bottom: 10px;
+	max-width: 25px;
+	margin-right: 10px;
+}
+section.galeria .item-galeria p{
+	min-height: 120px;
+}
+.img-main-sec .dire {
+    left: 1%;
+    top: 39%;
+}
+
+}
+
+/* Medium - MD */
+@media(min-width:992px) and (max-width:1199px) {
+header .menu .navbar-brand {
+	max-width: 300px;
+	padding: 15px 0;
+}
+section.home .item-destacado h3{
+    font-size: 24px;
+    line-height: 30px;
+}
+section.home .item-destacado h3 img{
+	margin-bottom: 10px;
+	max-width: 30px;
+}
+header .menu .navbar-nav li > a{
+	margin: 0 7px;
+}
+footer .redes {
+	padding: 10px 15px;
+}
+.img-main-sec .dire{
+	left: 20%;
+}
+
+
+
+}
+
+/* Large - LG */
+@media(min-width:1200px) {
+}
+
+
+section .presupuesto{
+	overflow: hidden;
+    padding: 60px 0;
+}
+section .presupuesto .cont-pasos{}
+section .presupuesto .cont-pasos .paso{
+	width: 30%;
+}
+section .presupuesto .cont-pasos .paso.active{}
+section .presupuesto .cont-pasos .paso span{
+	color: #5E5E5E;
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 400;
+	text-align: center;
+	width: 111px;
+	height: 158px;
+	margin: 0 auto;
+	display: block;
+	padding-top: 12px;
+}
+section .presupuesto .cont-pasos .paso.active span{}
+section .presupuesto .cont-pasos .obra{
+	background: url("../../img/estado2.png") no-repeat center top;
+}
+section .presupuesto .cont-pasos .obra.active{
+	background: url('../../img/estado4.png') no-repeat center top;
+}
+
+section .presupuesto .cont-pasos .datos{
+	background: url('../../img/estado3.png') no-repeat center top;
+}
+section .presupuesto .cont-pasos .datos.active{
+	background: url('../../img/estado1.png') no-repeat center top;
+}
+
+section .presupuesto .cont-pasos .paso p{
+	
+	color: #CCCCCC;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px 0;
+	padding-bottom: 10px;
+ /*background: url(../imagenes/presupuesto/1.png) no-repeat center bottom;*/
+  background: url(../img/iconos/bg-linea-presupuesto-1.png) no-repeat center bottom;
+
+
+
+}
+div.linea-t{
+	width: 20%; 
+	border-bottom: 1px solid; 
+	color: #DDDDDD;
+	margin-right: auto; 
+	margin-left: auto;
+	margin-bottom: 30px;
+}
+/***********/
+section .presupuesto .cont-pasos .paso.obra.active p{
+	background: url(../img/iconos/bg-linea-presupuesto-2.png) no-repeat center bottom;
+}
+section .presupuesto .cont-pasos .paso.datos.active p{
+	background: url(../img/iconos/bg-linea-presupuesto-2.png) no-repeat center bottom;
+}
+/***********/
+section .presupuesto .cont-pasos .paso.active div.linea-t{
+	color: #1d91d3;
+	
+}
+section .presupuesto .cont-pasos .paso.active p{
+	color: #a9a7a7;
+	font-weight: 500;
+}
+section .presupuesto .cont-pasos .linea{
+	/*max-width: 200px;*/
+}
+section .presupuesto .cont-pasos .linea hr{
+	height: 1px;
+	background: #DDDDDD;
+	margin: 0 -85px;
+}
+section .presupuesto .pasos{}
+section .presupuesto .pasos p{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+section .presupuesto .pasos p label{
+	float: left;
+	color: #555555;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 400;
+	padding-right: 10px;
+	padding-top: 5px;
+	width: 20%;
+	text-align: right;
+}
+section .presupuesto .pasos p input{
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #CCCCCC;
+	box-shadow: none;
+	width: 100%;
+	padding: 10px;
+    height: 34px;
+	color: #888888;
+}
+section .presupuesto .pasos p textarea{
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #CCCCCC;
+	box-shadow: none;
+	min-height: 60px;
+	width: 100%;
+	color: #5E5E5E;
+}
+section .presupuesto .cont-btn{
+	overflow: hidden;
+}
+section .presupuesto .cont-btn button{
+	border-radius: 0px;
+    text-align: center;
+    color: #FFF;
+    font-size: 15px;
+    line-height: 15px;
+    background: #1d91d3;
+    padding: 15px 45px;
+    display: block;
+    cursor: pointer;
+    border: 0;
+    margin: 30px 0 30px 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    height: 45px;
+    width: 170px;
+}
+
+section .presupuesto .cont-btn .boton-atras{
+	background: #fff;
+	color: #1d91d3;
+	border: 1px solid #1d91d3;
+}
+
+section .presupuesto .cont-btn .boton-atras:hover{
+	background: #1d91d3;
+	color: #fff;
+	border: 1px solid #1d91d3;
+}
+section .presupuesto .cont-btn button:hover{
+	/*opacity: 0.9;*/
+}
+section .presupuesto .pasos p .input-group{}
+section .presupuesto .pasos p .input-group span{}
+section .presupuesto .pasos p .input-group span input{}
+section .presupuesto .pasos .examinar{}
+section .presupuesto .pasos .examinar label{
+	float: left;
+	color: #555555;
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 400;
+	padding-right: 10px;
+	padding-top: 5px;
+	width: 20%;
+	text-align: right;
+}
+section .presupuesto .pasos .examinar .input-group{
+	float: left;
+    width: 100%;
+}
+section .presupuesto .pasos .examinar .input-group-btn{
+	border-radius: 0px;
+    float: right;
+    padding-right: 0;
+    text-align: center;
+    padding: 10px 0;
+    color: #FFF;
+    font-size: 14px;
+    height: 34px;
+    width: 40%;
+    text-transform: uppercase;
+    line-height: 16px;
+    background: #1d91d3;
+    margin: 0;
+    cursor: pointer;
+}
+
+section .presupuesto .pasos .examinar .input-group-btn:hover{
+	opacity: 0.8;
+}
+section .presupuesto .pasos .examinar .input-group-btn span{
+	border-radius: 0;
+}
+section .presupuesto .pasos .examinar .input-group input[type=file]{}
+section .presupuesto .pasos .examinar .input-group input[type=text]{
+	width: 50%;
+    float: left;
+    border-radius: 3px;
+    border: 1px solid #CCCCCC;
+    box-shadow: none;
+    padding: 10px;
+    height: 34px;
+    background: #FFF;
+    color: #5E5E5E;
+
+    text-align:right;
+}
+
+section .presupuesto .pasos .examinar .agregar{
+	float: right;
+	color: #000;
+	font-size: 14px;
+	text-decoration: underline;
+	margin: 15px 0 0;
+}
+section .presupuesto .cont-btn .anterior{
+	border-radius: 25px;
+    text-align: center;
+    color: #69C200;
+    font-size: 15px;
+    line-height: 18px;
+    height: 48px;
+    background: #FFF;
+    padding: 13px 45px;
+    display: block;
+    cursor: pointer;
+    border: 1px solid #69C200;
+    margin: 30px 0;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+section .presupuesto .cont-btn .anterior:hover{
+	color: #69C200;
+	border: 1px solid #69C200;
+}
+section .presupuesto .cont-btn a:hover{
+	text-decoration: none;
+}

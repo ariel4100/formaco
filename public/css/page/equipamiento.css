@@ -1,0 +1,265 @@
+#nav-mobile{
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+
+}
+
+
+
+/*a:hover{
+
+
+
+  background-color: white !important;
+
+
+
+}*/
+
+
+
+.side-nav li>a>i{
+
+  float: right !important;
+
+}
+
+.hover{
+
+  padding: 0 !important;
+
+  color: #595959 !important;
+
+}
+
+.height{height: 50px;}
+
+.side-nav li>a.producto{
+
+  line-height: 1;
+
+  height: 30px !important;
+
+  text-transform: initial;
+
+  display: flex;
+
+  align-items: center;
+
+  padding-left: 10px !important;
+
+  border-bottom: 0px !important;
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+
+
+.side-nav li>a.producto:hover{
+
+  font-weight: 700;
+
+}
+
+
+
+.active{
+
+  color: #009688 !important;
+
+  background-color: white !important;
+
+}
+
+ul li a.active2{
+	color: #009688 !important;
+}
+
+
+
+a.active i.material-icons{
+
+  color: #005F79 !important;
+
+}
+
+div.collapsible-body a.hover{
+
+  font-size: 15px;
+
+}
+
+
+
+a.waves-admin{
+
+  font-size: 17px !important;
+
+}
+
+
+
+@media only screen and (max-width:992px){
+
+  #nav-mobile{
+
+    transform: translateX(-1000%) !important;
+
+  }
+
+
+
+}
+
+
+
+
+
+/*subproducto*/
+
+.center{
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
+
+.galeria{
+
+	border: 1px solid #AEAEAE;
+
+	height: 300px;
+
+}
+
+.height-mini{
+
+	height: 90px;
+
+	border: 1px solid #AEAEAE;
+
+}
+
+.cont-sub{
+
+	height: 250px;
+
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
+
+.titulo-pro{
+
+	color: #045A9C;
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 32px;
+
+}
+
+.contenido-pro p{
+
+	color: #666666;
+
+	font-family: 'Source Sans Pro', sans-serif;
+
+	font-size: 18px;
+
+}
+
+.button-des{
+
+	border-radius: 15px;
+	background-color: #009688;
+	width: 150px;
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+thead{
+
+	color: #666666;
+	text-transform: uppercase;
+
+	font-size: 18px;
+
+}
+.modelos{
+	color: #921F37;
+	font-size: 22px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+table{
+
+	width: 100% !important;
+
+}
+
+tr{
+
+	border-bottom: 1px solid #005F79;
+
+}
+
+.button-des a{
+
+	color: white;
+
+}
+
+.sub-breadcrumb{
+
+
+
+  box-shadow: none;
+
+
+
+}
+
+
+
+.sub-breadcrumb a{
+
+
+
+  color: #93989E !important;
+
+
+
+  font-family: 'Source Sans Pro', sans-serif;
+
+
+
+  font-size: 16px;
+
+
+
+}
+
+
+
+.breadcrumb:before{
+
+
+
+  color: #93989E;
+
+
+
+}
+

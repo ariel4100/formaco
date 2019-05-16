@@ -1,0 +1,59 @@
+.color-table{
+	background-color: #EEEEEE;
+}
+.btn-success{
+	margin-right: -15px;
+}
+
+.page-header{
+	color: #337ab7;
+	font-size: 20px;
+}
+
+.img-logo{
+	max-height: 100px;
+	height: auto;
+}
+
+.img-slider{
+	max-height: 100px;
+	height: auto;
+}
+
+.img-destacado{
+	max-height: 100px;
+	height: auto;
+}
+.novisi{
+        display: none;
+    }
+
+label{
+	color: #337ab7;
+	margin: 5px 0 5px 0;
+}
+
+.caja-text{
+	width: 200px;
+}
+
+.idioma-panel{
+	color: #337ab7;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.idioma-panel:hover{
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.pad-panel{
+	margin-left: 0px!important;
+}
+.btnnuevo{
+	float: right;
+	color: #50AC5B!important;
+	font-weight: bold;
+	font-size: 16px;
+}

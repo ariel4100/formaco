@@ -9,6 +9,6 @@ class Slider extends Authenticatable
 {  
     protected $table = "sliders";
     protected $fillable = [
-        'imagen', 'titulo', 'subtitulo', 'orden', 'seccion'
+        'imagen', 'titulo', 'subtitulo', 'orden', 'seccion','section','type'
     ];
 }

@@ -163,6 +163,7 @@ class PaginasController extends Controller
 
     public function maquinas()
     {
+        $sliders= Slider::where('section','productos')->where('type','Maquinas y Herramientas')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','maquinas')->get();
         $subfamilia = General::orderBy('orden','asc')->where('seccion','maquinas')->get();
@@ -172,12 +173,14 @@ class PaginasController extends Controller
             'subfamilias' => $subfamilia,
             'familias' => $familias,
             'titulo' => "Máquinas y Herramientas",
-			'active' => $active               
+			'active' => $active,
+            'sliders' => $sliders,
         ]);
     }
 
     public function flejes()
     {
+        $sliders= Slider::where('section','productos')->where('type','Flejes')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','flejes')->get();
         $subfamilia = General::orderBy('orden','asc')->where('seccion','flejes')->get();
@@ -187,12 +190,14 @@ class PaginasController extends Controller
             'subfamilias' => $subfamilia,
             'familias' => $familias,
             'titulo' => "Flejes",
-            'active' => $active               
+            'active' => $active,
+            'sliders' => $sliders,
         ]);
     }
 
     public function articulosembalaje()
     {
+        $sliders= Slider::where('section','productos')->where('type','Articulos de Embalaje')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','embalaje')->get();
         $subfamilia = General::orderBy('orden','asc')->where('seccion','embalaje')->get();
@@ -202,12 +207,14 @@ class PaginasController extends Controller
             'subfamilias' => $subfamilia,
             'familias' => $familias,
             'titulo' => "Artículos de Embalaje",
-            'active' => $active               
+            'active' => $active,
+            'sliders' => $sliders,
         ]);
     }
 
     public function selloshebillas()
     {
+        $sliders= Slider::where('section','productos')->where('type','Sellos y Hebillas')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','sellos')->get();
         $subfamilia = General::orderBy('orden','asc')->where('seccion','sellos')->get();
@@ -217,7 +224,8 @@ class PaginasController extends Controller
             'subfamilias' => $subfamilia,
             'familias' => $familias,
             'titulo' => "Sellos y Hebillas",
-            'active' => $active               
+            'active' => $active,
+            'sliders' => $sliders,
         ]);
     }
     
@@ -231,6 +239,7 @@ class PaginasController extends Controller
         ]);
     }
     public function sectores($id){
+        $sliders= Slider::where('section','sectores')->get();
         $metadato= Metadato::where('seccion','sectores')->first();
         $sectores = Sector::orderBy('orden','asc')->get();
         if($id==0)
@@ -244,6 +253,7 @@ class PaginasController extends Controller
             'sectores' => $sectores,
             'active' => $active,               
             'subsectores' => $subsector,
+            'sliders' => $sliders,
         ]);
     }
     public function subsectores($id){

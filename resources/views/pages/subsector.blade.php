@@ -24,6 +24,7 @@
 	    	</p>
     	</div>
     </div>
+
     <div class="row" style="padding: 0px 10%">
     	@foreach($sectores as $sector)
 	    	<div class="col s12 m3 sector" style="padding-top: 18px;">

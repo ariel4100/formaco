@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Slider;
 use App\Http\Requests\SliderRequest;
+use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
@@ -197,5 +198,82 @@ class SliderController extends Controller
                     }
                 }
         }
+    }
+
+
+
+    public function list($section)
+    {
+        $slider = Slider::where('section', $section)->orderBy('orden', 'ASC')->paginate(20);
+        return view('adm.control.Sliders.index',compact('section','slider'));
+    }
+
+    public function crear($section)
+    {
+        $tipo = ['Flejes','Sellos y Hebillas','Maquinas y Herramientas','Articulos de Embalaje'];
+        return view('adm.control.Sliders.create', ['seccion' => $section,'tipo' => $tipo]);
+    }
+
+
+    public function almacenar(Request $request, Slider $slider)
+    {
+        //dd( $request->section);
+        $slider = new Slider();
+        $slider->titulo = $request->titulo;
+        $slider->subtitulo = $request->subtitulo;
+        $slider->type = $request->type;
+        $slider->imagen = 'dad';
+        $slider->section = $request->section;
+        $slider->orden = $request->orden;
+
+        $slider->save();
+        if ($request->file('imagen'))
+        {
+            $path = Storage::disk('public')->put('uploads/sliders',$request->file('imagen'));//$request->file('image')->store('public/sliders');
+            $slider->fill(['imagen' => $path])->save();
+        }
+
+        return back()->with('status', 'Slider creado correctamente');
+    }
+
+
+    public function editar($id)
+    {
+        $tipo = ['Flejes','Sellos y Hebillas','Maquinas y Herramientas','Articulos de Embalaje'];
+        $slider = Slider::find($id);
+        $seccion = $slider->section;
+        return view('adm.control.Sliders.edit', compact('slider','seccion','tipo'));
+        //return view('adm.slider.edit', ['section' => $item->section, 'element' => $item]);
+    }
+
+    public function actualizar(Request $request, $id)
+    {
+        //dd($request->all());
+        $slider = Slider::find($id);
+        $slider->titulo = $request->titulo;        //IMAGE
+        $slider->subtitulo = $request->subtitulo;
+        $slider->subtitulo = $request->subtitulo;
+        $slider->type = $request->type;
+        $slider->imagen = 'dad';
+        $slider->section = $request->section;
+        $slider->orden = $request->orden;
+
+        $slider->save();
+
+        if ($request->file('imagen'))
+        {
+            $path = Storage::disk('public')->put('uploads/sliders',$request->file('imagen'));
+            $slider->fill(['imagen' => $path])->save();
+        }
+
+        return back()->with('status', 'Slider actualizado correctamente');
+    }
+
+    public function eliminar($id)
+    {
+        $slider = Slider::find($id);
+        $section = $slider->section;
+        $slider->delete();
+        return back();
     }
 }

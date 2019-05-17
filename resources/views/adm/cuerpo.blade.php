@@ -132,6 +132,8 @@
 
                 <ul>
 
+                  <li class=""><a href="{{ route('slider.list', ['seccion' => 'sectores']) }}">Editar slider</a></li>
+
                   <li class="<?php if(isset($sectores_edit)){echo($sectores_edit);} ?>"><a href="{{route('sectores.index')}}">Editar Sectores</a></li>
 
                   <li class="<?php if(isset($sectores_create)){echo($sectores_create);} ?>"><a href="{{ route('sectores.create')}}">Crear Sectores</a></li>
@@ -151,7 +153,7 @@
               <div class="collapsible-body">
 
                 <ul>
-
+                  <li class=""><a href="{{ route('slider.list', ['seccion' => 'productos']) }}">Editar slider</a></li>
                   <li class="<?php if(isset($producto_edit)){echo($producto_edit);} ?>"><a href="{{route('producto.index')}}">Editar Familia</a></li>
 
                   <li class="<?php if(isset($producto_create)){echo($producto_create);} ?>"><a href="{{ route('producto.create')}}">Crear Familia</a></li>

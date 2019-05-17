@@ -154,6 +154,14 @@ Route::group(['prefix' => 'adm', 'middleware' => 'admin'], function(){
 			'as'=>'sliders.destroy'
 	]);
 	Route::resource('sliders','SliderController');
+    Route::group(['prefix' => 'slider', 'as' => 'slider'], function() {
+        Route::get('{seccion}/crear/slider', ['uses' => 'SliderController@crear', 'as' => '.crear']);
+        Route::post('almacenar', ['uses' => 'SliderController@almacenar', 'as' => '.almacenar']);
+        Route::get('{seccion}/list', ['uses' => 'SliderController@list', 'as' => '.list']);
+        Route::get('editar/{slider}', ['uses' => 'SliderController@editar', 'as' => '.editar']);
+        Route::put('actualizar/{slider}', ['uses' => 'SliderController@actualizar', 'as' => '.actualizar']);
+        Route::get('eliminar/{slider}', ['uses' => 'SliderController@eliminar', 'as' => '.eliminar']);
+    });
 	/*-----------buscador----------*/
 	Route::get('buscador/{id}/destroy',[
 			'uses'=>'BuscadoresController@destroy',

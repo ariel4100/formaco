@@ -58,7 +58,7 @@
 				@foreach($productos as $producto)
 					<div class="col s12 m6 l3">
 						<div class="row div_hover">
-							<a href="{{ route('subproducto',$producto->id) }}">
+							<a href="{{ route('maquinas-herramientas') }}">
 								<div>
 									<div class="row" style="  border: 1px solid #B0B0B0; margin:0px; position:relative; height: 300px; display: flex; justify-content: center;align-content: center;">
 											<img src="{{asset($producto->imagen)}}"  style="max-height:100%;"  class="responsive-img" alt="">

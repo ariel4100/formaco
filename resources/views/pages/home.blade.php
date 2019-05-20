@@ -18,40 +18,40 @@
 
 @section('paginas')
 	<div class="container-fluid">
-		{{--<div id="carousel" class="carousel carousel-slider center" data-indicators="true" style="position: relative;">--}}
-			{{--<div class="carousel-item white-text" href="" style="position: absolute;">--}}
-				{{--<video autoplay loop muted poster="placeholder.jpg" id="backgroundvid">--}}
-					{{--<source src="{{ asset('video/formacovideo.mp4') }}" type="video/mp4">--}}
-					{{--<p>Fallback content to cover incompatibility issues</p>--}}
-				{{--</video>--}}
-			{{--</div>--}}
-		    {{--@foreach($sliders as $slider)--}}
-			    {{--<div class="carousel-item white-text" href="" style="position: absolute;">--}}
-			      {{--<img src="{{asset($slider->imagen)}}" alt="">--}}
-			      {{--@if($slider->titulo)--}}
-			      	{{--<div class="cont-titulos">--}}
-				    	{{--<div>--}}
-				    		{{--<div class="titulo-slider ">{!!$slider->titulo !!}</div>--}}
-							{{--<div class="subtitulo-slider ">{!!$slider->subtitulo !!}</div>--}}
-				    		{{--<div style="text-align: center; margin-bottom: 7%;">--}}
-								{{--<a class="waves-effect waves-light btn" href="{{route('buscador-productos')}}">Buscador</a>--}}
-					    	{{--</div>--}}
-				    	{{--</div>--}}
-
-				    {{--</div>--}}
-				   {{--@endif--}}
-			    {{--</div>--}}
-			    {{--<div class="expand"><a href="#empresa"><i class="material-icons hide-on-small-only" style="color:white;">expand_more</i></a></div>--}}
-		    {{--@endforeach--}}
-		{{--</div>--}}
-		<div class="row">
-
+		<div id="carousel" class="carousel carousel-slider center" data-indicators="true" style="position: relative;">
+			<div class="carousel-item white-text" href="" style="position: absolute;">
 				<video autoplay loop muted poster="placeholder.jpg" id="backgroundvid">
 					<source src="{{ asset('video/formacovideo.mp4') }}" type="video/mp4">
 					<p>Fallback content to cover incompatibility issues</p>
 				</video>
+			</div>
+		    @foreach($sliders as $slider)
+			    <div class="carousel-item white-text" href="" style="position: absolute;">
+			      <img src="{{asset($slider->imagen)}}" alt="">
+			      @if($slider->titulo)
+			      	<div class="cont-titulos">
+				    	<div>
+				    		<div class="titulo-slider ">{!!$slider->titulo !!}</div>
+							<div class="subtitulo-slider ">{!!$slider->subtitulo !!}</div>
+				    		<div style="text-align: center; margin-bottom: 7%;">
+								<a class="waves-effect waves-light btn" href="{{route('buscador-productos')}}">Buscador</a>
+					    	</div>
+				    	</div>
 
+				    </div>
+				   @endif
+			    </div>
+			    <div class="expand"><a href="#empresa"><i class="material-icons hide-on-small-only" style="color:white;">expand_more</i></a></div>
+		    @endforeach
 		</div>
+		{{--<div class="row">--}}
+
+				{{--<video autoplay loop muted poster="placeholder.jpg" id="backgroundvid">--}}
+					{{--<source src="{{ asset('video/formacovideo.mp4') }}" type="video/mp4">--}}
+					{{--<p>Fallback content to cover incompatibility issues</p>--}}
+				{{--</video>--}}
+
+		{{--</div>--}}
 		<section class="row" style="margin-top: 40px;">
 			<div style="margin: 0px 6%;">
 				<div style="margin-bottom: 3%;"><p class="titulo-servicio">Productos Destacados</p><hr></div>

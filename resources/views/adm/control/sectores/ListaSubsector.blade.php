@@ -1,6 +1,6 @@
 @extends('adm.cuerpo')
 
-@section('titulo', 'Lista de subsectores')
+@section('titulo', 'Lista de sectores')
 @section('contenido')
 <main>
 	<div class="container">

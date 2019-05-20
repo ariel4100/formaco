@@ -242,10 +242,11 @@ class PaginasController extends Controller
         $sliders= Slider::where('section','sectores')->get();
         $metadato= Metadato::where('seccion','sectores')->first();
         $sectores = Sector::orderBy('orden','asc')->get();
-        if($id==0)
-            $subsector = Subsector::where('id_sector',$sectores->first()->id)->get();
-        else
-            $subsector = Subsector::where('id_sector',$id)->get();
+        $subsector = Subsector::orderBy('orden','asc')->get();
+//        if($id==0)
+//            $subsector = Subsector::where('id_sector',$sectores->first()->id)->get();
+//        else
+//            $subsector = Subsector::where('id_sector',$id)->get();
 
         $active = null;
         return view('pages.sector',[
@@ -257,12 +258,14 @@ class PaginasController extends Controller
         ]);
     }
     public function subsectores($id){
+        $sliders= Slider::where('section','sectores')->get();
         $productos = General::orderBy('orden','asc')->get();
         $productos_selected = Subsector_producto::where('id_subsector', $id)->get();
         $metadato= Metadato::where('seccion','sectores')->first();
         $sectores = Sector::orderBy('orden','asc')->get();
         $sector_selected = Subsector::find($id);
-        $subsector = Subsector::where('id_sector',$sector_selected->id_sector)->get();
+        $subsector = Subsector::orderBy('orden','asc')->get();
+        //$subsector = Subsector::where('id_sector',$sector_selected->id_sector)->get();
         $active = null;
         return view('pages.subsector',[
             'metadatos' => $metadato,
@@ -271,6 +274,7 @@ class PaginasController extends Controller
             'subsectores' => $subsector,
             'productos' =>  $productos,
             'productos_selected' => $productos_selected,
+            'sliders' => $sliders,
         ]);
     }
     public function buscador_productos(Request $request){

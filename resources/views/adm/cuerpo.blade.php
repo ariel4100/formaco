@@ -133,14 +133,14 @@
                 <ul>
 
                   <li class=""><a href="{{ route('slider.list', ['seccion' => 'sectores']) }}">Editar slider</a></li>
+                  <!--
+                  {{--<li class="<?php if(isset($sectores_edit)){echo($sectores_edit);} ?>"><a href="{{route('sectores.index')}}">Editar Sectores</a></li>--}}
 
-                  <li class="<?php if(isset($sectores_edit)){echo($sectores_edit);} ?>"><a href="{{route('sectores.index')}}">Editar Sectores</a></li>
+                  {{--<li class="<?php if(isset($sectores_create)){echo($sectores_create);} ?>"><a href="{{ route('sectores.create')}}">Crear Sectores</a></li>--}}
+-->
+                   <li class="<?php if(isset($subsectores_edit)){echo($subsectores_edit);} ?>"><a href="{{route('subsectores.index')}}">Editar Sectores</a></li>
 
-                  <li class="<?php if(isset($sectores_create)){echo($sectores_create);} ?>"><a href="{{ route('sectores.create')}}">Crear Sectores</a></li>
-
-                   <li class="<?php if(isset($subsectores_edit)){echo($subsectores_edit);} ?>"><a href="{{route('subsectores.index')}}">Editar Subsectores</a></li>
-
-                  <li class="<?php if(isset($subsectores_create)){echo($subsectores_create);} ?>"><a href="{{ route('subsectores.create')}}">Crear Subsectores</a></li>
+                  <li class="<?php if(isset($subsectores_create)){echo($subsectores_create);} ?>"><a href="{{ route('subsectores.create')}}">Crear Sectores</a></li>
 
                 </ul>
 

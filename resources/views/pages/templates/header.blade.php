@@ -41,7 +41,7 @@
         <div class="div-ppal {{ Request::segment(1) === 'sellos-hebillas' ? 'active-div' : null }}"><a class="li-ppal center-align {{ Request::segment(1) === 'sellos-hebillas' ? 'active-ppal' : null }}" href="{{route('sellos-hebillas')}}" style="letter-spacing: 1;">SELLOS Y HEBILLAS</a></div>
 
         <div class="div-ppal {{ Request::segment(1) === 'maquinas-herramientas' || $active == 'maquinas-herramientas' ? 'active-div' : null }}"><a class="li-ppal center-align {{ Request::segment(1) === 'maquinas-herramientas' || $active == 'maquinas-herramientas' ? 'active-ppal' : null }}" href="{{route('maquinas-herramientas')}}" style="letter-spacing: 1;">MÁQUINAS Y HERRAMIENTAS</a></div>
-        <div class="div-ppal {{ Request::segment(1) === 'sectores' ? 'active-div' : null }}"><a class="li-ppal center-align {{ Request::segment(1) === 'sectores' ? 'active-ppal' : null }}" href="{{route('sectores',0)}}" style="letter-spacing: 1;">SOLUCIONES POR SECTOR</a></div>
+        <div class="div-ppal {{ Request::segment(1) === 'sectores' ? 'active-div' : null }}"><a class="li-ppal center-align {{ Request::segment(1) === 'sectores' ? 'active-ppal' : null }}" href="{{url('sectores/subsector/1')}}" style="letter-spacing: 1;">SOLUCIONES POR SECTOR</a></div>
 
         <div class="div-ppal {{ Request::segment(1) === 'articulos-embalaje' ? 'active-div' : null }}"><a class="li-ppal center-align {{ Request::segment(1) === 'articulos-embalaje' ? 'active-ppal' : null }}" href="{{route('articulos-embalaje')}}" style="letter-spacing: 1;">ARTÍCULOS DE EMBALAJE</a></div>
         <div>

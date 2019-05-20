@@ -47,19 +47,20 @@
     <div class="row"  >
 		<div class="col s3">
 			<div class="collection">
-				@foreach($sectores as $sector)
-					<a href="{{route('sectores', $sector->id)}}" class="collection-item" style="display: flex; justify-content: space-between; align-items: center">
+				@foreach($subsectores as $subsector)
+					<a href="{{route('subsectores', $subsector->id)}}" class="collection-item" style="display: flex; justify-content: space-between; align-items: center">
 						<div class="">
-							<img src="{{asset($sector->imagen)}}" alt="" class=" ">
+							<img src="{{asset($subsector->imagen)}}" alt="" class=" ">
 						</div>
-
-						<span class="title">{{$sector->nombre}}</span>
-
+						<span class="title">{{$subsector->nombre}}</span>
 					</a>
 				@endforeach
 
 				{{--<a href="#!" class="collection-item active">Alvin</a>--}}
 			</div>
+		</div>
+		<div class="col s9">
+			<h4>Seleccione un Sector</h4>
 		</div>
     	{{--@foreach($sectores as $sector)--}}
 	    	{{--<div class="col s12 m3 sector" style="padding-top: 18px; max-height: 111px;">--}}
@@ -75,21 +76,21 @@
 	    	{{----}}
     	{{--@endforeach--}}
     </div>
-    <div class="row subsectores">
-    	<p class="center" style="color: #04599B; font-weight: 600; margin-bottom: 5%;">Seleccione Subsección</p>
-    	@foreach($subsectores as $subsector)
-	    	<a href="{{route('subsectores', $subsector->id)}}" style="color: #A6A6A6;">
-	    		<div class="col s12 m4 subsector" onclick="ajax($$subsector->id)">
-					<div style="text-align: center;">
-		    			<img  style="max-height: 65px;"  src="{{asset($subsector->imagen)}}" alt="">
-		    		</div>
-		    		<div style="text-align: center;">
-		    			{{$subsector->nombre}}
-		    		</div>
-				</div>
-	    	</a>
-			
-    	@endforeach
-    </div>
+		{{--<div class="row subsectores">--}}
+			{{--<p class="center" style="color: #04599B; font-weight: 600; margin-bottom: 5%;">Seleccione Subsección</p>--}}
+			{{--@foreach($subsectores as $subsector)--}}
+				{{--<a href="{{route('subsectores', $subsector->id)}}" style="color: #A6A6A6;">--}}
+					{{--<div class="col s12 m4 subsector" onclick="ajax($$subsector->id)">--}}
+						{{--<div style="text-align: center;">--}}
+							{{--<img  style="max-height: 65px;"  src="{{asset($subsector->imagen)}}" alt="">--}}
+						{{--</div>--}}
+						{{--<div style="text-align: center;">--}}
+							{{--{{$subsector->nombre}}--}}
+						{{--</div>--}}
+					{{--</div>--}}
+				{{--</a>--}}
+				{{----}}
+			{{--@endforeach--}}
+		{{--</div>--}}
   </section>
 @endsection

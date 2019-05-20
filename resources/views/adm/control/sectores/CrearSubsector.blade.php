@@ -1,6 +1,6 @@
 @extends('adm.cuerpo')
 
-@section('titulo', 'Crear Subsector')
+@section('titulo', 'Crear Sector')
 
 @section('contenido')
 
@@ -26,12 +26,12 @@
 			{!!Form::open(['route'=>['subsectores.store'], 'method'=>'POST', 'files' => true])!!}
 				
 		       	{{ csrf_field() }}
-				<div class="row">
-					<div class="form-group col-xs-12 pad-panel">
-					  {!!Form::label('Familia:')!!}
-					  {!! Form::select('id_sector', $familias, null, ['class' => 'form-control']) !!}
-					</div>
-				</div>
+				{{--<div class="row">--}}
+					{{--<div class="form-group col-xs-12 pad-panel">--}}
+					  {{--{!!Form::label('Familia:')!!}--}}
+					  {{--{!! Form::select('id_sector', $familias, null, ['class' => 'form-control']) !!}--}}
+					{{--</div>--}}
+				{{--</div>--}}
 				<div class="file-field input-field col s12">
 					<div class="btn">
 							<span>Imagen</span>

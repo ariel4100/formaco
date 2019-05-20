@@ -2,7 +2,7 @@
 
 
 
-@section('titulo', 'Editar subsector')
+@section('titulo', 'Editar Sector')
 
 
 
@@ -52,22 +52,22 @@
 
       <div class="row">
 
-        <div class="form-group col s6">
+        {{--<div class="form-group col s6">--}}
 
-          {!!Form::label('Sector:')!!}
-		  <select name="id_sector" id="id_sector" required>
-		  	@foreach($familias as $familia)
-		  		@if($producto->id_sector == $familia->id)
-					<option value="{{$familia->id}}">{{$familia->nombre}}</option>
-				@endif
-		  	@endforeach
-		  	@foreach($familias as $familia)
-		  		@if($producto->id_sector != $familia->id)
-					<option value="{{$familia->id}}">{{$familia->nombre}}</option>
-				@endif
-		  	@endforeach
-		  </select>
-        </div>
+          {{--{!!Form::label('Sector:')!!}--}}
+		  {{--<select name="id_sector" id="id_sector" required>--}}
+		  	{{--@foreach($familias as $familia)--}}
+		  		{{--@if($producto->id_sector == $familia->id)--}}
+					{{--<option value="{{$familia->id}}">{{$familia->nombre}}</option>--}}
+				{{--@endif--}}
+		  	{{--@endforeach--}}
+		  	{{--@foreach($familias as $familia)--}}
+		  		{{--@if($producto->id_sector != $familia->id)--}}
+					{{--<option value="{{$familia->id}}">{{$familia->nombre}}</option>--}}
+				{{--@endif--}}
+		  	{{--@endforeach--}}
+		  {{--</select>--}}
+        {{--</div>--}}
 
       </div>
 

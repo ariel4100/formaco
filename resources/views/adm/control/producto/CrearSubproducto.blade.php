@@ -100,9 +100,9 @@
 
           </div>
 
-          <div class="input-field col s6">
+          <div class="input-field col s12">
 
-            {!!Form::label('Link de video:')!!}
+			  <p class="">Ingresar la siguiente parte de la ruta: https://www.youtube.com/watch?v=<b>dQw4w9WgXcQ</b></p>
 
             {!!Form::text('link', null , ['class'=>'validate'])!!}
 

@@ -53,11 +53,8 @@
 
     </script>
 
-    <script>
 
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
 
-    </script>
 
 
 

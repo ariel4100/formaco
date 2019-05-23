@@ -124,8 +124,9 @@
             mirá el video a continuación</div>
           </div>
           <div class="col s6">
+              {{--<iframe width="560" height="315" src=" " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>/--}}
             <iframe width="100%" height="315"
-              src="{{$seleccionada->link}}">
+              src="https://www.youtube.com/embed/{{$seleccionada->link}}">
               </iframe>
           </div>
         </div>

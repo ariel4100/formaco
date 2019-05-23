@@ -58,6 +58,17 @@
 						</div>
 					</div>
 				</div>
+				{{--<div class="row">--}}
+					{{--<div class="file-field input-field col s12">--}}
+						{{--<div class="btn">--}}
+							{{--<span>Video</span>--}}
+							{{--{!! Form::file('video') !!}--}}
+						{{--</div>--}}
+						{{--<div class="file-path-wrapper">--}}
+							{{--{!! Form::text('video',$home->video, ['class'=>'file-path validate']) !!}--}}
+						{{--</div>--}}
+					{{--</div>--}}
+				{{--</div>--}}
 				<div class="row">
 
 				    <label class="col s12" for="parrafo">Contenido</label>
@@ -80,6 +91,25 @@
 
 					</div>
 
+				</div>
+				<div class="row">
+
+					<label class="col s12" for="parrafo">Titulo del video</label>
+
+					<div class="input-field col s12">
+
+						{!!Form::textarea('titulovideo', $home->titulovideo, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
+
+					</div>
+				</div>
+				<div class="row">
+					<label class="col s12" for="parrafo">Descripcion del video</label>
+
+					<div class="input-field col s12">
+
+						{!!Form::textarea('descripcionvideo', $home->descripcionvideo, ['class'=>'validate', 'cols'=>'74', 'rows'=>'5'])!!}
+
+					</div>
 				</div>
 
 
@@ -106,6 +136,10 @@
 	CKEDITOR.replace('contenido');
 
 	CKEDITOR.replace('titulo');
+
+    CKEDITOR.replace('titulovideo');
+
+    CKEDITOR.replace('descripcionvideo');
 
 	CKEDITOR.config.height = '100px';
 

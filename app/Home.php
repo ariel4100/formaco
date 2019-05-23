@@ -9,6 +9,6 @@ class Home extends Authenticatable
 {
     protected $table = "homes";
     protected $fillable = [
-        'titulo', 'subtitulo', 'contenido', 'link', 'imagen'
+        'titulo', 'subtitulo', 'contenido', 'link', 'imagen','titulovideo','descripcionvideo','video'
     ];
 }

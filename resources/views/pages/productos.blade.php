@@ -116,4 +116,10 @@
 		
 	</div>
   </section>
+	<script>
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+        });
+
+	</script>
 @endsection

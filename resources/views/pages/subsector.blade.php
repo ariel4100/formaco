@@ -44,7 +44,7 @@
     	</div>
     </div>
 	  <div class="row">
-		  <div class="col s3">
+		  <div class="col m3 s12">
 			  <div class="collection">
 				  @foreach($subsectores as $subsector)
 					  <a href="{{route('subsectores', $subsector->id)}}" class="collection-item" style="display: flex; justify-content: space-between; align-items: center">
@@ -125,6 +125,12 @@
 
 
   </section>
+	<script>
+        $('.carousel.carousel-slider').carousel({
+            fullWidth: true,
+        });
+
+	</script>
 @endsection
 <script>
 	function ajax($id){

@@ -39,11 +39,24 @@ class HomeController extends Controller
 
     public function update(HomeRequest $request, $id)
     {
+
         $dato=Home::find($id);
         $id++;
         $dato->contenido=$request->contenido;
         $dato->subtitulo=$request->subtitulo;
+        $dato->titulovideo=$request->titulovideo;
+        $dato->descripcionvideo=$request->descripcionvideo;
         $dato->titulo=$request->titulo;
+//        $dato->video=$request->video;
+        if ($request->hasFile('video')) {
+            if ($request->file('video')->isValid()) {
+                $file = $request->file('video');
+                $path = public_path('video/');
+                $request->file('video')->move($path, $id.'_'.$file->getClientOriginalName());
+                $dato->imagen = 'video/' . $id.'_'.$file->getClientOriginalName();
+                $dato->save();
+            }
+        }
         if ($request->hasFile('imagen')) {
             if ($request->file('imagen')->isValid()) {
                 $file = $request->file('imagen');
@@ -55,7 +68,7 @@ class HomeController extends Controller
         }
         $dato->save();
 
-        flash('Se ha actualizado de forma exitosa')->success()->important();
+        //flash('Se ha actualizado de forma exitosa')->success()->important();
         return redirect()->route('home.index');
     }
 

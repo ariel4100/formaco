@@ -105,8 +105,8 @@
             {!!Form::text('orden', $producto->orden , ['class'=>'validate', 'required'])!!}
 
           </div>
-          <div class="input-field col s6">
-            {!!Form::label('Link de video:')!!}
+          <div class="input-field col s12">
+			  <p class="">Ingresar la siguiente parte de la ruta: https://www.youtube.com/watch?v=<b>dQw4w9WgXcQ</b></p>
             {!!Form::text('link', $producto->link , ['class'=>'validate'])!!}
           </div>
 

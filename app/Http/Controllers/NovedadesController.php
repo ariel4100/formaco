@@ -51,6 +51,7 @@ class NovedadesController extends Controller
       $categoria= new Novedad();
       $categoria->nombre=$request->nombre;
       $categoria->texto=$request->texto;
+      $categoria->link=$request->link;
       $categoria->texto_breve=$request->texto_breve;
       $categoria->fecha=$request->fecha;
       $categoria->orden=$request->orden;
@@ -128,6 +129,7 @@ class NovedadesController extends Controller
     $categoria=Novedad::find($id);
     $categoria->nombre=$request->nombre;
     $categoria->texto=$request->texto;
+    $categoria->link=$request->link;
     $categoria->texto_breve=$request->texto_breve;
     $categoria->fecha=$request->fecha;
     $categoria->orden=$request->orden;

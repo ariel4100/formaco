@@ -45,12 +45,13 @@ class ProductosController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $producto = producto::find($id);
         $id = producto::all()->max('id');
         $producto->orden = $request->orden;
         $producto->link = $request->link;
         $producto->nombre = $request->nombre;
-        $producto->destacado = $request->destacado;
+//        $producto->destacado = $request->destacado;
         $id++;
         if ($request->hasFile('imagen')) {
             if ($request->file('imagen')->isValid()) {

@@ -183,10 +183,19 @@
 	        </div>
 
 	      </div>
+				<div class="row" style="margin-bottom: 5rem">
+					<div class="input-field col-xs-12 pad-panel">
+						<select multiple name="relacionados[]">
+							<option value="" disabled selected>Seleccionar relacionados</option>
+                            @foreach($general as $item)
+                                <option value="{{ $item->id }}">{{ $item->titulo }}</option>
+                            @endforeach
+						</select>
+						<label>Seleccionar Productos Relacionados</label>
+					</div>
+				</div>
 
-
-
-		<div class="col s12 no-padding">
+		<div class="col s12 no-padding" style="margin-bottom: 5rem">
 
 			{!!Form::submit('Actualizar', ['class'=>'waves-effect waves-light btn right'])!!}
 

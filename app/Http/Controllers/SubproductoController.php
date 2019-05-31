@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ProductoRelacionados;
 use Illuminate\Http\Request;
 use App\General;
 use App\Familia;
@@ -23,6 +24,7 @@ class SubproductoController extends Controller
     public function create()
     {
         $query = Familia::all();
+        $general = General::orderBy('orden', 'ASC')->get();
         $familias = [];
         foreach ($query as $familia) {
             $familias[$familia->id] = $familia->nombre;
@@ -64,7 +66,8 @@ class SubproductoController extends Controller
           ->with('tipo', $tipo)
           ->with('cantidad', $cantidad)
           ->with('sistema', $sistema)
-          ->with('familias',$familias);
+          ->with('familias',$familias)
+          ->with('general',$general);
     }
     public function store(Request $request)
     {
@@ -101,7 +104,6 @@ class SubproductoController extends Controller
                 $path = public_path('img/producto/');
                 $request->file('descarga')->move($path, $id.'_'.$file->getClientOriginalName());
                 $imagen->descarga = 'img/producto/'. $id.'_'.$file->getClientOriginalName();
-
             }
         }
         $imagen->save();
@@ -111,12 +113,27 @@ class SubproductoController extends Controller
         $img->id_generales = $imagen->id;
         $img->orden = 'aa';
         $img->imagen = $imagen->imagen_destacada;
-
         $img->save();
+
+
+        if ($request->get('relacionados')) {
+            foreach ($request->get('relacionados') as $item) {
+                //var_dump($item);
+                ProductoRelacionados::create([
+                    'producto_id' => $item,
+                    'producto' => $imagen->id,
+                ]);
+            }
+        }
+
         return redirect()->route('subproducto.index');
     }
     public function edit($id)
     {
+        $general = General::all();
+        //dd($general->pluck('id'));
+        $productorelacionado = ProductoRelacionados::where('producto',$general->pluck('id'))->get();
+        $pr = $productorelacionado->pluck('producto_id');
         $servicio_seccion = 'active';
         $servicio_edit ='active';
         $servicio = General::find($id);
@@ -134,7 +151,9 @@ class SubproductoController extends Controller
             ->with('tipo', $tipo)
             ->with('cantidad', $cantidad)
             ->with('sistema', $sistema)
-            ->with('subproducto_edit', $servicio_edit);
+            ->with('subproducto_edit', $servicio_edit)
+            ->with('pr', $pr)
+            ->with('general',$general);
     }
     public function show($id)
     {
@@ -196,6 +215,17 @@ class SubproductoController extends Controller
             }
         }
         $servicio->save();
+
+        ProductoRelacionados::where('producto',$servicio->id)->delete();
+        if ($request->get('relacionados')) {
+            foreach ($request->get('relacionados') as $item) {
+                //var_dump($item);
+                ProductoRelacionados::firstOrCreate([
+                    'producto_id' => $item,
+                    'producto' => $servicio->id,
+                ]);
+            }
+        }
 
         return redirect()->route('subproducto.index');
     }

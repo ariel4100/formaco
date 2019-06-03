@@ -75,6 +75,13 @@ class SubproductoController extends Controller
         $id = General::all()->max('id');
         $imagen->contenido = $request->contenido;
         $imagen->titulo = $request->titulo;
+        if ($imagen->status)
+        {
+            $imagen->status = true;
+        }else{
+            $imagen->status = false;
+        }
+
         $imagen->orden = $request->orden;
         $imagen->id_familia = $request->id_familia;
         $family = Familia::find($request->id_familia);
@@ -162,12 +169,20 @@ class SubproductoController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $servicio=General::find($id);
         $servicio->titulo=$request->titulo;
         $servicio->id_familia=$request->id_familia;
         $family = Familia::find($request->id_familia);
         $servicio->seccion = $family->seccion;
         $servicio->orden=$request->orden;
+        if (isset($request->status))
+        {
+            $servicio->status = true;
+        }else{
+            $servicio->status = false;
+        }
+
         $servicio->contenido=$request->contenido;
         $servicio->link = $request->link;
         if($request->flejar != 0){

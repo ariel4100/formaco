@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ProductoRelacionados;
 use Illuminate\Http\Request;
 use App\Slider;
 use App\Producto;
@@ -60,7 +61,8 @@ class PaginasController extends Controller
     public function galeria($id){
         
 			 
-			 $seleccionada = General::find($id);
+			 $seleccionada = General::where('id',$id)->where('status',true)->first();
+
 			 
 			 $familia = Familia::orderBy('orden','asc')->where('seccion',$seleccionada->seccion)->get();
 			 $subfamilia = General::orderBy('orden','asc')->where('seccion',$seleccionada->seccion)->get();
@@ -69,6 +71,8 @@ class PaginasController extends Controller
 			 $active='productos';
 			 $galeria = Imagen::where('id_generales',$id)->orderBy('orden','asc')->get();
              $producto= Producto::orderBy('orden','ASC')->get();
+             $relacionado = ProductoRelacionados::leftJoin('generales','generales.id','producto_relacionados.producto_id')
+                 ->where('producto', $seleccionada->id)->limit(3)->get();;
 			 return view('pages.galeria', [
 					 'familias' => $familia,
 					 'subfamilias' => $subfamilia,
@@ -77,6 +81,7 @@ class PaginasController extends Controller
 					 'active' => $active,
 					 'galerias' => $galeria,
                      'productos' => $producto,
+                     'relacionado' => $relacionado
                     			 ]);
     }
     public function Novedades()
@@ -148,7 +153,7 @@ class PaginasController extends Controller
     	 $seleccionada = Familia::find($id);
     	 
          $familia = Familia::orderBy('orden','asc')->where('seccion',$seleccionada->seccion)->get();
-         $subfamilia = General::orderBy('orden','asc')->where('seccion',$seleccionada->seccion)->get();
+         $subfamilia = General::orderBy('orden','asc')->where('status',true)->where('seccion',$seleccionada->seccion)->get();
     	 $metadato= Metadato::where('seccion','productos')->first();
     	 $active=$seleccionada->seccion;
     	 return view('pages.subproducto', [
@@ -166,7 +171,7 @@ class PaginasController extends Controller
         $sliders= Slider::where('section','productos')->where('type','Maquinas y Herramientas')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','maquinas')->get();
-        $subfamilia = General::orderBy('orden','asc')->where('seccion','maquinas')->get();
+        $subfamilia = General::orderBy('orden','asc')->where('status',true)->where('seccion','maquinas')->get();
 		$active='productos';
         return view('pages.productos',[
             'metadatos' => $metadato,
@@ -183,7 +188,7 @@ class PaginasController extends Controller
         $sliders= Slider::where('section','productos')->where('type','Flejes')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','flejes')->get();
-        $subfamilia = General::orderBy('orden','asc')->where('seccion','flejes')->get();
+        $subfamilia = General::orderBy('orden','asc')->where('status',true)->where('seccion','flejes')->get();
         $active='productos';
         return view('pages.productos',[
             'metadatos' => $metadato,
@@ -200,7 +205,7 @@ class PaginasController extends Controller
         $sliders= Slider::where('section','productos')->where('type','Articulos de Embalaje')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','embalaje')->get();
-        $subfamilia = General::orderBy('orden','asc')->where('seccion','embalaje')->get();
+        $subfamilia = General::orderBy('orden','asc')->where('status',true)->where('seccion','embalaje')->get();
         $active='productos';
         return view('pages.productos',[
             'metadatos' => $metadato,
@@ -217,7 +222,7 @@ class PaginasController extends Controller
         $sliders= Slider::where('section','productos')->where('type','Sellos y Hebillas')->get();
         $metadato= Metadato::where('seccion','productos')->first();
         $familias = Familia::orderBy('orden','ASC')->where('seccion','sellos')->get();
-        $subfamilia = General::orderBy('orden','asc')->where('seccion','sellos')->get();
+        $subfamilia = General::orderBy('orden','asc')->where('status',true)->where('seccion','sellos')->get();
         $active='productos';
         return view('pages.productos',[
             'metadatos' => $metadato,
@@ -259,7 +264,7 @@ class PaginasController extends Controller
     }
     public function subsectores($id){
         $sliders= Slider::where('section','sectores')->get();
-        $productos = General::orderBy('orden','asc')->get();
+        $productos = General::orderBy('orden','asc')->where('status',true)->get();
         $productos_selected = Subsector_producto::where('id_subsector', $id)->get();
         $metadato= Metadato::where('seccion','sectores')->first();
         $sectores = Sector::orderBy('orden','asc')->get();

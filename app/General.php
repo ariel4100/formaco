@@ -9,6 +9,6 @@ class General extends Authenticatable
 {
     protected $table = "generales";
     protected $fillable = [
-        'id_familia', 'titulo', 'tabla', 'contenido', 'imagen_destacada', 'descarga', 'orden', 'id_subsector'
+        'id_familia', 'titulo', 'tabla', 'contenido', 'imagen_destacada', 'descarga', 'orden', 'id_subsector','status'
     ];
 }

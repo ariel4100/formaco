@@ -193,6 +193,14 @@
 						</select>
 						<label>Seleccionar Productos Relacionados</label>
 					</div>
+					<div class="col s12 m12">
+						<p style="display: flex; justify-content: center;">
+							<label>
+								<input type="checkbox" name="status" style="position: unset; opacity: unset"/>
+								<span>Mostrar?</span>
+							</label>
+						</p>
+					</div>
 				</div>
 
 		<div class="col s12 no-padding" style="margin-bottom: 5rem">

@@ -100,7 +100,7 @@
           <div class="contenido-pro">
               {!!$seleccionada->contenido !!}
           </div>
-          @if( $seleccionada->descarga  )
+          @if($seleccionada->descarga  )
           <div class="button-des" style="margin-bottom: 5px;">
               <a href="{{asset($seleccionada->descarga)}}" download="{{ $seleccionada->descarga }}">
                   FICHA TÉCNICA
@@ -135,35 +135,33 @@
     @endif
   <section class="row">
       <div>
-        
+        {{--@dd($relacionado)--}}
         <div class="col s3"></div>
         <div class="col s9" style="padding: 0px;">
           <div><p class="titulo-servicio">Productos Relacionados</p></div><hr>
           <div class="row">
-            @php($i=0)
-            @foreach($productos as $producto)
-            @if($i < 3)
+            @foreach($relacionado as $producto)
               <div class="col s12 m6 l4" style="padding-left: 0px;">
                 <div class="row div_hover">
-                  <a href="{{$producto->link}}">
+                  <a href="{{route('galeria',$producto->id)}}">
                     <div class="cont-producto">
                       <div class="row" style="    border: 1px solid #B0B0B0; height: 260px !important; border: 1px solid #B0B0B0; margin:0px; position:relative; height: 300px; display: flex; justify-content: center;align-content: center;">
-                          <img src="{{asset($producto->imagen)}}"  style="max-height:100%;"  class="responsive-img" alt="">
+                          <img src="{{asset($producto->imagen_destacada)}}"  style="max-height:100%;"  class="responsive-img" alt="">
                           <div class="cont-img-pro">
 
                           </div>
                       </div>
                       <div class="row" style="margin:0px;">
                         <div class="fila">
-                          {!!$producto->nombre!!}
+                          {!!$producto->titulo!!}
                         </div>
                       </div>
                     </div>
                   </a>
                 </div>
               </div>
-            @php($i++)
-            @endif
+
+
             @endforeach
           </div>
         </div>

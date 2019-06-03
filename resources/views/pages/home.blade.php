@@ -44,7 +44,7 @@
 
 @section('paginas')
 	<div class="container-fluid">
-		<div id="carousel" class="carousel carousel-slider center" data-indicators="true" style="position: relative;">
+		<div id="carousel" class="carousel carousel-slider center" data-indicators="true" style="height: 461.547px; position: relative;">
 			<div class="carousel-item white-text" href="" style="position: absolute; display: flex; justify-content: center">
 				<video autoplay muted poster="placeholder.jpg" id="backgroundvid">
 					<source src="{{ asset('video/formacovideo.mp4') }}" type="video/mp4">
